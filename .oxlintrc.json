@@ -355,12 +355,6 @@
   },
   "overrides": [
     {
-      "files": ["packages/desktop-electron/**/*"],
-      "rules": {
-        "react/rules-of-hooks": "off"
-      }
-    },
-    {
       "files": ["**/*.test.{js,ts,jsx,tsx}", "packages/docs/**/*"],
       "rules": {
         "actual/no-untranslated-strings": "off",

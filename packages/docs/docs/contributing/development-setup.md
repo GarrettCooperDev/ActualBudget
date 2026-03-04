@@ -82,9 +82,6 @@ yarn start:browser
 
 # Start with sync server (for testing sync functionality)
 yarn start:server-dev
-
-# Start desktop app development
-yarn start:desktop
 ```
 
 ### Building
@@ -92,9 +89,6 @@ yarn start:desktop
 ```bash
 # Build browser version
 yarn build:browser
-
-# Build desktop app
-yarn build:desktop
 
 # Build API package
 yarn build:api
@@ -153,9 +147,6 @@ TypeScript uses project references. Always run `yarn typecheck` from the root to
 ```bash
 # Browser build
 yarn build:browser
-
-# Desktop build
-yarn build:desktop
 
 # API build
 yarn build:api

@@ -69,7 +69,7 @@ export function CurrencySettings() {
   const [defaultCurrencyCode, setDefaultCurrencyCodePref] = useSyncedPref(
     'defaultCurrencyCode',
   );
-  const selectedCurrencyCode = defaultCurrencyCode || '';
+  const selectedCurrencyCode = defaultCurrencyCode || 'USD';
 
   const [symbolPosition, setSymbolPositionPref] = useSyncedPref(
     'currencySymbolPosition',

@@ -194,7 +194,7 @@ export function Settings() {
 
   useEffect(() => {
     if (!isCurrencyExperimentalEnabled) {
-      setDefaultCurrencyCodePref('');
+      setDefaultCurrencyCodePref('USD');
     }
   }, [isCurrencyExperimentalEnabled, setDefaultCurrencyCodePref]);
 

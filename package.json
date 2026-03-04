@@ -22,13 +22,7 @@
     "start:server": "yarn workspace @actual-app/sync-server start",
     "start:server-monitor": "yarn workspace @actual-app/sync-server start-monitor",
     "start:server-dev": "NODE_ENV=development BROWSER_OPEN=localhost:5006 yarn npm-run-all --parallel 'start:server-monitor' 'start'",
-    "start:desktop": "yarn desktop-dependencies && npm-run-all --parallel 'start:desktop-*'",
     "start:docs": "yarn workspace docs start",
-    "desktop-dependencies": "npm-run-all --parallel rebuild-electron build:browser-backend build:plugins-service",
-    "start:desktop-node": "yarn workspace loot-core watch:node",
-    "start:desktop-client": "yarn workspace @actual-app/web watch",
-    "start:desktop-server-client": "yarn workspace @actual-app/web build:browser",
-    "start:desktop-electron": "yarn workspace desktop-electron watch",
     "start:browser": "yarn workspace plugins-service build-dev && npm-run-all --parallel 'start:browser-*'",
     "start:service-plugins": "yarn workspace plugins-service watch",
     "start:browser-backend": "yarn workspace loot-core watch:browser",
@@ -37,7 +31,6 @@
     "build:browser-backend": "yarn workspace loot-core build:browser",
     "build:server": "yarn build:browser && yarn workspace @actual-app/sync-server build",
     "build:browser": "./bin/package-browser",
-    "build:desktop": "./bin/package-electron",
     "build:plugins-service": "yarn workspace plugins-service build",
     "build:api": "yarn workspace @actual-app/api build",
     "build:docs": "yarn workspace docs build",
@@ -48,11 +41,9 @@
     "test": "lage test --continue",
     "test:debug": "lage test --no-cache --continue",
     "e2e": "yarn workspace @actual-app/web run e2e",
-    "e2e:desktop": "yarn build:desktop --skip-exe-build --skip-translations && yarn workspace desktop-electron e2e",
     "playwright": "yarn workspace @actual-app/web run playwright",
     "vrt": "yarn workspace @actual-app/web run vrt",
     "vrt:docker": "./bin/run-vrt",
-    "rebuild-electron": "./node_modules/.bin/electron-rebuild -m ./packages/loot-core",
     "rebuild-node": "yarn workspace loot-core rebuild",
     "lint": "oxfmt --check . && oxlint --type-aware",
     "lint:fix": "oxfmt . && oxlint --fix --type-aware",
@@ -99,7 +90,6 @@
     ]
   },
   "browserslist": [
-    "electron >= 35.0",
     "defaults"
   ],
   "engines": {

@@ -54,7 +54,7 @@ This guide helps you resolve common issues when developing for Actual.
 
 **Solution:**
 
-- Don't directly reference platform-specific imports (`.api`, `.web`, `.electron`)
+- Don't directly reference platform-specific imports (`.api`, `.web`)
 - Use conditional exports in `loot-core` for platform-specific code
 
 ## Build Failures
@@ -85,9 +85,8 @@ This guide helps you resolve common issues when developing for Actual.
 **Solution:**
 
 1. On Windows: Ensure you selected "Automatically install the necessary tools" during Node.js installation
-2. Run `yarn rebuild-electron` for Electron builds
-3. Run `yarn workspace loot-core rebuild` for Node.js builds
-4. Ensure you have the necessary build tools installed (Python, Visual Studio Build Tools on Windows)
+2. Run `yarn workspace loot-core rebuild` for Node.js builds
+3. Ensure you have the necessary build tools installed (Python, Visual Studio Build Tools on Windows)
 
 ## Development Server Issues
 

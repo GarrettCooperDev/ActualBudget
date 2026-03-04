@@ -22,32 +22,24 @@ The core application logic that runs on any platform.
 
 ### 2. desktop-client (`packages/desktop-client/` - aliased as `@actual-app/web`)
 
-The React-based UI for web and desktop.
+The React-based UI for web.
 
 - **Purpose**: Forms the front-end code for the Actual web app - the code you see when you load Actual in your browser
-- **Note**: Despite the name "desktop-client", this package is actually the web UI used by both browser and desktop apps
+- **Note**: Despite the name "desktop-client", this package is the web UI
 - **Technology**: React components using functional programming patterns, Vite for bundling
 - **Key Directories**:
   - `src/components/` - React components
   - `src/hooks/` - Custom React hooks
   - `e2e/` - End-to-end tests
 
-### 3. desktop-electron (`packages/desktop-electron/`)
-
-Electron wrapper for the desktop application.
-
-- **Purpose**: Provides the desktop application wrapper that allows stable use of the Actual Web App locally with or without internet or a sync-server
-- **Technology**: Electron for window management and native OS integration
-- **Note**: It is unlikely you will need to make changes here unless working on Electron-specific features
-
-### 4. api (`packages/api/` - aliased as `@actual-app/api`)
+### 3. api (`packages/api/` - aliased as `@actual-app/api`)
 
 Public API for programmatic access to Actual.
 
 - **Purpose**: Node.js API package designed for integrations and automation
 - **Use Cases**: Custom importers, data exporters, automation scripts
 
-### 5. sync-server (`packages/sync-server/` - aliased as `@actual-app/sync-server`)
+### 4. sync-server (`packages/sync-server/` - aliased as `@actual-app/sync-server`)
 
 Synchronization server for multi-device support.
 
@@ -67,7 +59,7 @@ You can see this in the [package.json](https://github.com/actualbudget/actual/bl
 
 The workspace reference ensures that changes to `@actual-app/web` are reflected in your server deployment. If you see any discrepancies, run `yarn build:server` to compile the latest.
 
-### 6. component-library (`packages/component-library/` - aliased as `@actual-app/components`)
+### 5. component-library (`packages/component-library/` - aliased as `@actual-app/components`)
 
 Reusable React UI components.
 
@@ -78,7 +70,7 @@ Reusable React UI components.
   - `src/` - Component source files
   - `src/icons/` - Icon components (auto-generated)
 
-### 7. crdt (`packages/crdt/` - aliased as `@actual-app/crdt`)
+### 6. crdt (`packages/crdt/` - aliased as `@actual-app/crdt`)
 
 CRDT (Conflict-free Replicated Data Type) implementation for data synchronization.
 
@@ -86,13 +78,13 @@ CRDT (Conflict-free Replicated Data Type) implementation for data synchronizatio
 - **Technology**: Protocol buffers for serialization
 - **Use**: Used by the sync-server for conflict-free data synchronization
 
-### 8. plugins-service (`packages/plugins-service/`)
+### 7. plugins-service (`packages/plugins-service/`)
 
 Service for handling plugins/extensions.
 
 - **Purpose**: Manages plugin functionality and extensions
 
-### 9. eslint-plugin-actual (`packages/eslint-plugin-actual/`)
+### 8. eslint-plugin-actual (`packages/eslint-plugin-actual/`)
 
 Custom ESLint rules specific to Actual.
 
@@ -104,7 +96,7 @@ Custom ESLint rules specific to Actual.
   - `typography` - Typography rules
   - `prefer-if-statement` - Prefers explicit if statements
 
-### 10. docs (`packages/docs/`)
+### 9. docs (`packages/docs/`)
 
 Documentation website built with Docusaurus.
 
